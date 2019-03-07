@@ -1,5 +1,5 @@
 
-public class PriorityQueueHospital<PatientType extends Comparable<PatientType>> extends Hospital
+public class PriorityQueueHospital<PatientType extends Comparable<PatientType>> extends Hospital<PatientType>
 {
 	
 	
@@ -35,12 +35,19 @@ public class PriorityQueueHospital<PatientType extends Comparable<PatientType>> 
 	@Override
 	public String hospitalType()
 	{
-		
+		return "PriorityQueueHospital";
 	}
 	
 	@Override
 	public String allPatientInfo()
 	{
-		return "PriorityQueueHospital";
+		String allInfo = "";
+		
+		for (Object currInfo : waitList)
+		{
+			allInfo += currInfo.toString();
+		}
+		
+		return allInfo;
 	}
 }
