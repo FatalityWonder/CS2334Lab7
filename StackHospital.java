@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+import java.util.Deque;
 
 public class StackHospital<PatientType> 
 {

@@ -13,13 +13,28 @@ public class HealthyPerson extends Person
 	@Override
 	protected int compareToImpl(Person p) 
 	{
-		// TODO Auto-generated method stub
+		if (p instanceof HealthyPerson)
+		{
+			if(this.getName().toLowerCase().compareTo(p.getName().toLowerCase()) < 0)
+			{
+				return this.getName().toLowerCase().compareTo(p.getName().toLowerCase());
+			}
+			else if(this.getName().toLowerCase().compareTo(p.getName().toLowerCase()) > 0)
+			{
+				return this.getName().toLowerCase().compareTo(p.getName().toLowerCase());
+			}
+			else if(this.getName().toLowerCase().compareTo(p.getName().toLowerCase()) == 0)
+			{
+				return 0;
+			}
+		}
+
 		return 0;
 	}
 	
 	public String toString()
 	{
-		
+		return String.format("%s In for %s", super.toString(), this.reason);
 	}
 
 }

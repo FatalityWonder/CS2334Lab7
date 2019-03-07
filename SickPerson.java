@@ -10,14 +10,30 @@ public class SickPerson extends Person
 	}
 
 	@Override
-	protected int compareToImpl(Person p) {
-		// TODO Auto-generated method stub
+	protected int compareToImpl(Person p) 
+	{
+		if (p instanceof SickPerson)
+		{
+			if(this.severity > ((SickPerson)p).severity)
+			{
+				return ((SickPerson)p).severity - this.severity; 
+			}
+			else if(this.severity < ((SickPerson)p).severity)
+			{
+				return ((SickPerson)p).severity - this.severity;
+			}
+			else if(this.severity == ((SickPerson)p).severity)
+			{
+				return 0;
+			}
+		}
+
 		return 0;
 	}
 	
 	public String toString()
 	{
-		
+		return String.format("%s Severity level %d", super.toString(), this.severity);
 	}
 
 }
