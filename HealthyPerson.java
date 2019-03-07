@@ -1,10 +1,13 @@
 
 public class HealthyPerson extends Person 
 {
+	
+	private String reason;
+	
 	public HealthyPerson(String name, int age, String reason) 
 	{
 		super(name, age);
-		// TODO Auto-generated constructor stub
+		this.reason = reason;
 	}
 	
 	@Override
@@ -12,6 +15,11 @@ public class HealthyPerson extends Person
 	{
 		// TODO Auto-generated method stub
 		return 0;
+	}
+	
+	public String toString()
+	{
+		
 	}
 
 }
