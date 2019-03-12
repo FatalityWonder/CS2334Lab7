@@ -15,18 +15,7 @@ public class HealthyPerson extends Person
 	{
 		if (p instanceof HealthyPerson)
 		{
-			if(this.getName().toLowerCase().compareTo(p.getName().toLowerCase()) < 0)
-			{
-				return this.getName().toLowerCase().compareTo(p.getName().toLowerCase());
-			}
-			else if(this.getName().toLowerCase().compareTo(p.getName().toLowerCase()) > 0)
-			{
-				return this.getName().toLowerCase().compareTo(p.getName().toLowerCase());
-			}
-			else if(this.getName().toLowerCase().compareTo(p.getName().toLowerCase()) == 0)
-			{
-				return 0;
-			}
+			return this.getName().compareToIgnoreCase(p.getName());
 		}
 
 		return 0;

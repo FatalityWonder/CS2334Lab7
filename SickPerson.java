@@ -14,20 +14,9 @@ public class SickPerson extends Person
 	{
 		if (p instanceof SickPerson)
 		{
-			if(this.severity > ((SickPerson)p).severity)
-			{
-				return ((SickPerson)p).severity - this.severity; 
-			}
-			else if(this.severity < ((SickPerson)p).severity)
-			{
-				return ((SickPerson)p).severity - this.severity;
-			}
-			else if(this.severity == ((SickPerson)p).severity)
-			{
-				return 0;
-			}
+			return ((SickPerson)p).severity - this.severity;
 		}
-
+		
 		return 0;
 	}
 	
