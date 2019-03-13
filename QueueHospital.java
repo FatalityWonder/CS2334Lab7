@@ -10,11 +10,10 @@ public class QueueHospital<PatientType> extends Hospital<PatientType>
 		waitList = new LinkedList<PatientType>();
 	}
 	
-	@SuppressWarnings("unchecked")
 	@Override
-	public void addPatient(Object patient)
+	public void addPatient(PatientType patient)
 	{
-		waitList.add((PatientType) patient);
+		waitList.add(patient);
 	}
 	
 	@Override

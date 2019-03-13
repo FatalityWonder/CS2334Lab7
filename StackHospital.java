@@ -10,11 +10,10 @@ public class StackHospital<PatientType> extends Hospital<PatientType>
 		waitList = new LinkedList<PatientType>();
 	}
 	
-	@SuppressWarnings("unchecked")
 	@Override
-	public void addPatient(Object patient)
+	public void addPatient(PatientType patient)
 	{
-		waitList.addFirst((PatientType) patient);
+		waitList.addFirst(patient);
 	}
 	
 	@Override
